@@ -1,7 +1,8 @@
-"use strict";
+﻿"use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
   const year = document.querySelector("#year");
+
   if (year) {
     year.textContent = String(new Date().getFullYear());
   }
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
       const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
       menuButton.setAttribute("aria-expanded", String(!isOpen));
       navigation.classList.toggle("is-open", !isOpen);
     });
@@ -21,19 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         menuButton.setAttribute("aria-expanded", "false");
         navigation.classList.remove("is-open");
       });
-    });
-  }
-
-  // This form is not connected to a delivery service.
-  // Clearly tell users that no enquiry has been sent.
-  const form = document.querySelector("#enquiry-form");
-  const status = document.querySelector("#form-status");
-
-  if (form && status) {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      status.textContent =
-        "The form is not connected to a secure message-delivery service yet. No message has been sent. Please use the contact email shown in the footer for now.";
     });
   }
 });
