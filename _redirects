@@ -1,0 +1,9 @@
+# Connecting Workforce — legacy URL redirects
+# Older HTML pages are retained in the repository.
+/cleaning-services.html /cleaning.html 301
+/job-board.html /jobs.html 301
+/jobs-skills-events.html /jobs.html 301
+/online-store.html /store.html 301
+/services.html /index.html 301
+/technology-devices.html /technology.html 301
+/work-with-us.html /employers.html 301
